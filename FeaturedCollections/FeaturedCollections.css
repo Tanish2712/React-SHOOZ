@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* ===============================
+   Featured Collections — tokens
+=================================*/
+.featured-collections {
+  --fc-bg: #2f2f2f;
+  --fc-text: #ffffff;
+  --fc-muted: #b9b9b9;
+  --fc-accent: white;
+  --fc-overlay-soft: rgba(20, 20, 20, 0.15);
+  --fc-overlay-strong: rgba(10, 10, 10, 0.78);
+  --fc-font-display: "Poppins", "Segoe UI", sans-serif;
+  --fc-font-body: "Inter", "Segoe UI", sans-serif;
+
+  background-color: var(--fc-bg);
+  padding: 80px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--fc-font-body);
+}
+
+.featured-collections * {
+  box-sizing: border-box;
+}
+
+/* ===============================
+   Heading
+=================================*/
+.fc-heading {
+  max-width: 770px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.fc-eyebrow {
+  display: inline-block;
+  font-family: var(--fc-font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--fc-accent);
+  margin-bottom: 14px;
+}
+
+.fc-title {
+  font-family: var(--fc-font-display);
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--fc-text);
+  line-height: 1.15;
+  margin: 0 0 14px;
+}
+
+.fc-description {
+  font-size: 0.95rem;
+  color: var(--fc-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===============================
+   Grid — mobile first (single column)
+=================================*/
+.fc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 260px;
+  gap: 25px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Card
+=================================*/
+.fc-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.fc-card.fc-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fc-card-link {
+  display: block;
+  height: 100%;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fc-card-link:focus-visible {
+  outline: 2px solid var(--fc-text);
+  outline-offset: -4px;
+}
+
+.fc-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.fc-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--fc-overlay-strong) 0%,
+    var(--fc-overlay-soft) 65%
+  );
+  transition: background 0.4s ease;
+}
+
+.fc-card-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 26px;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+.fc-card-subtitle {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #e6e6e6;
+  margin-bottom: 8px;
+}
+
+.fc-card-title {
+  font-family: var(--fc-font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--fc-text);
+  line-height: 1.3;
+  margin: 0 0 14px;
+  max-width: 320px;
+}
+
+.fc-card-cta {
+  position: relative;
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--fc-text);
+  padding-bottom: 3px;
+}
+
+.fc-card-cta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--fc-text);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* ===============================
+   Hover interactions
+=================================*/
+.fc-card:hover,
+.fc-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.fc-card:hover .fc-card-image,
+.fc-card:focus-within .fc-card-image {
+  transform: scale(1.08);
+}
+
+.fc-card:hover .fc-card-overlay,
+.fc-card:focus-within .fc-card-overlay {
+  background: linear-gradient(
+    to top,
+    var(--fc-overlay-hover) 15%,
+    rgba(0, 0, 0, 0.5) 75%
+  );
+}
+
+.fc-card:hover .fc-card-content,
+.fc-card:focus-within .fc-card-content {
+  transform: translateY(-6px);
+}
+
+.fc-card:hover .fc-card-cta::after,
+.fc-card:focus-within .fc-card-cta::after {
+  transform: scaleX(1);
+}
+
+/* ===============================
+   Tablet — 2 columns (768px–1199px)
+=================================*/
+@media (min-width: 768px) {
+  .fc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 300px;
+  }
+
+  .fc-card-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ===============================
+   Desktop — 3 + 2 layout (1200px+)
+=================================*/
+@media (min-width: 1200px) {
+  .fc-grid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 340px 350px;
+    grid-template-areas:
+      "c1 c1 c2 c2 c3 c3"
+      "c4 c4 c4 c5 c5 c5";
+  }
+
+  .fc-card-1 {
+    grid-area: c1;
+  }
+  .fc-card-2 {
+    grid-area: c2;
+  }
+  .fc-card-3 {
+    grid-area: c3;
+  }
+  .fc-card-4 {
+    grid-area: c4;
+  }
+  .fc-card-5 {
+    grid-area: c5;
+  }
+
+  .fc-card-title {
+    font-size: 1.55rem;
+  }
+}
+
+/* ===============================
+   Small mobile refinement (<=576px)
+=================================*/
+@media (max-width: 576px) {
+  .featured-collections {
+    padding: 56px 16px;
+  }
+
+  .fc-grid {
+    grid-auto-rows: 240px;
+  }
+
+  .fc-card-content {
+    padding: 20px;
+  }
+
+  .fc-card-title {
+    max-width: none;
+  }
+}
+
+/* ===============================
+   Reduced motion
+=================================*/
+@media (prefers-reduced-motion: reduce) {
+  .fc-card,
+  .fc-card-image,
+  .fc-card-overlay,
+  .fc-card-content,
+  .fc-card-cta::after {
+    transition: none !important;
+  }
+
+  .fc-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

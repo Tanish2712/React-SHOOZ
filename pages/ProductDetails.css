@@ -1,0 +1,434 @@
+/* ===========================
+   PRODUCT DETAILS
+=========================== */
+
+.details {
+  width: 90%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+
+
+/* LEFT SIDE */
+
+.details-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.main-image img {
+  width: 100%;
+  display: block;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+/* Thumbnails */
+
+.thumbnail-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.thumbnail-images img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.thumbnail-images img:hover {
+  border: 2px solid #000;
+}
+
+/* RIGHT */
+
+.details-right h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.details-right h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* ===========================
+   SIZE
+=========================== */
+
+.size-box {
+  margin-bottom: 30px;
+}
+
+.size-box h4 {
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.sizes {
+  display: flex;
+  gap: 12px;
+}
+
+.sizes button {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.sizes button:hover {
+  background: black;
+  color: white;
+}
+
+.active-size {
+  background: black !important;
+  color: white;
+}
+
+/* ===========================
+   COLORS
+=========================== */
+
+.color-box {
+  margin-bottom: 35px;
+}
+
+.color-box h4 {
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.colors {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.color {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: .3s;
+}
+
+.active-color {
+  border-color: black;
+}
+
+.black {
+  background: #161616;
+}
+
+.navy {
+  background: #23395d;
+}
+
+.brown {
+  background: #9d6734;
+}
+
+.red {
+  background: #d51b29;
+}
+
+.green {
+  background: #1e8d53;
+}
+
+.orange {
+  background: #f39c12;
+}
+
+.gray {
+  background: gray;
+}
+
+.pink {
+  background: hotpink;
+}
+
+/* ===========================
+   QUANTITY
+=========================== */
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 35px 0;
+}
+
+.quantity button {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.quantity span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.detail-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.detail-cart-btn,
+.detail-buy-btn {
+  flex: 1;
+  height: 58px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+.detail-cart-btn {
+  background: #b44a5d;
+  color: #fff;
+}
+
+.detail-buy-btn {
+  background: #111;
+  color: #fff;
+}
+
+.detail-cart-btn:hover {
+  background: #972843;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(180, 74, 93, 0.3);
+}
+
+.detail-buy-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===========================
+   WISHLIST
+=========================== */
+
+.wish-row {
+  display: flex;
+  gap: 30px;
+  margin: 25px 0;
+  font-size: 15px;
+  color: #555;
+}
+
+.wish-row span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wish-row span:hover {
+  color: #b24053;
+}
+
+/* ===========================
+   PRODUCT INFO
+=========================== */
+
+.product-info {
+  margin: 30px 0;
+}
+
+.product-info p {
+  margin: 12px 0;
+  color: #555;
+  font-size: 15px;
+}
+
+.product-info strong {
+  color: #111;
+}
+
+/* ===========================
+   SALE BOX
+=========================== */
+
+.sale-box {
+  margin: 30px 0;
+  padding: 18px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  text-align: center;
+  font-weight: 600;
+  color: #b24053;
+}
+
+.sale-box span {
+  display: block;
+  margin-top: 10px;
+  color: #111;
+  font-size: 18px;
+}
+
+/* ===========================
+   ACCORDION
+=========================== */
+
+.accordion-item {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-title {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.features {
+  margin-top: 30px;
+}
+
+.features p {
+  margin: 14px 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===========================
+   HOVER EFFECTS
+=========================== */
+
+.detail-cart-btn,
+.detail-buy-btn,
+.sizes button,
+.quantity button {
+  transition: 0.3s;
+}
+
+.quantity button:hover {
+  background: #111;
+  color: white;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 992px) {
+
+  .details {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .details-right h1 {
+    font-size: 34px;
+  }
+
+  .details-right h2 {
+    font-size: 28px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .details {
+    width: 94%;
+  }
+
+  .details-left {
+    flex-direction: column-reverse;
+  }
+
+  .thumbnail-images {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .thumbnail-images img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .detail-buttons {
+    flex-direction: column;
+  }
+
+  .wish-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .details-right h1 {
+    font-size: 28px;
+  }
+
+  .details-right h2 {
+    font-size: 24px;
+  }
+
+  .sizes button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .quantity button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .detail-cart-btn,
+  .detail-buy-btn {
+    height: 50px;
+  }
+
+}

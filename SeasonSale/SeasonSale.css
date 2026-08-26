@@ -1,0 +1,226 @@
+/* ===============================
+   Season End Sale — tokens
+=================================*/
+.season-sale {
+  --ss-bg: #ffffff;
+  --ss-accent: #8c6f52;
+  --ss-heading: #111111;
+  --ss-body-muted: #666666;
+  --ss-price: #555555;
+  --ss-border: #eeeeee;
+  --ss-image-bg: #fafafa;
+  --ss-font: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  background-color: var(--ss-bg);
+  padding: 100px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: var(--ss-font);
+}
+
+.season-sale * {
+  box-sizing: border-box;
+}
+
+.ss-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   Heading area
+=================================*/
+.ss-heading {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto 70px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.ss-heading.ss-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ss-subtitle {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ss-accent);
+  margin-bottom: 18px;
+}
+
+.ss-title {
+  font-size: clamp(2.1rem, 5vw, 3.75rem);
+  font-weight: 645;
+  font-size: 55px;
+  line-height: 1.1;
+  color: var(--ss-heading);
+  margin: 0 0 20px;
+}
+
+.ss-description {
+  font-size: 20px;
+  line-height: 1.8;
+  color: var(--ss-body-muted);
+  margin: 0;
+}
+
+/* ===============================
+   Product grid — mobile first
+   Single column: normal row flow
+=================================*/
+.ss-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* ===============================
+   Product row
+=================================*/
+.ss-product-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--ss-border);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.4s ease,
+    background-color 0.3s ease;
+}
+
+.ss-product-row.ss-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ss-product-image-wrap {
+  flex-shrink: 0;
+  width: 85px;
+  height: 85px;
+  background-color: var(--ss-image-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ss-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.ss-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ss-product-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ss-heading);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.ss-product-price {
+  font-size: 16px;
+  color: var(--ss-price);
+}
+
+/* ===============================
+   Hover interaction
+=================================*/
+.ss-product-row:hover {
+  transform: translateX(5px);
+}
+
+.ss-product-row:hover .ss-product-image {
+  transform: scale(1.08);
+}
+
+.ss-product-row:hover .ss-product-name {
+  color: #000000;
+}
+
+/* ===============================
+   Tablet — 2 columns (768px+)
+   grid-auto-flow: column fills each
+   column top-to-bottom before wrapping
+=================================*/
+@media (min-width: 768px) {
+  .ss-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    gap: 30px 40px;
+  }
+}
+
+/* ===============================
+   Desktop — 3 columns (1200px+)
+   3 products stacked per column
+=================================*/
+@media (min-width: 1200px) {
+  .ss-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    gap: 30px 40px;
+  }
+}
+
+/* ===============================
+   Small mobile refinement (<=576px)
+=================================*/
+@media (max-width: 576px) {
+  .season-sale {
+    padding: 64px 16px;
+  }
+
+  .ss-heading {
+    margin-bottom: 48px;
+  }
+
+  .ss-description {
+    font-size: 17px;
+  }
+
+  .ss-product-image-wrap {
+    width: 70px;
+    height: 70px;
+  }
+
+  .ss-product-name {
+    font-size: 16px;
+  }
+}
+
+/* ===============================
+   Reduced motion
+=================================*/
+@media (prefers-reduced-motion: reduce) {
+  .ss-heading,
+  .ss-product-row,
+  .ss-product-image,
+  .ss-product-name {
+    transition: none !important;
+  }
+
+  .ss-heading,
+  .ss-product-row {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

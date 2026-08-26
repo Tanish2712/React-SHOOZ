@@ -1,0 +1,22 @@
+.categoryPage {
+  width: 100%;
+  background: #f8f8f8;
+  padding-bottom: 60px;
+}
+
+.categoryPage__container {
+  width: 92%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 35px;
+  align-items: start;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .categoryPage__container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,417 @@
+/* =========================================
+   POPULAR STYLES
+========================================= */
+
+.popularStyles {
+    width: 100%;
+    padding: 120px 0;
+    background: #fff;
+}
+
+.popularContainer {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+/* ===============================
+   LEFT
+================================ */
+
+.popularLeft {
+    flex: 1;
+    max-width: 620px;
+}
+
+.sectionTag {
+    display: inline-block;
+
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.popularTitle {
+
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    color: #111;
+
+    margin-bottom: 30px;
+}
+
+.popularText {
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #555;
+
+    margin-bottom: 30px;
+}
+
+.popularText.second {
+
+    margin-bottom: 10px;
+
+}
+
+.shopBtn {
+
+    width: 200px;
+    height: 45px;
+
+    border: none;
+
+    background: #b14557;
+
+    color: #fff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.shopBtn:hover {
+
+    background: #92384a;
+
+}
+
+.shopBtn span {
+
+    transition: .3s;
+
+}
+
+.shopBtn:hover span {
+
+    transform: translateX(5px);
+
+}
+
+/* ===============================
+   RIGHT
+================================ */
+
+.popularRight{
+    flex:1;
+    position:relative;
+
+    max-width:720px;
+}
+
+.popularImage{
+
+    width:100%;
+    display:block;
+
+}
+
+/*====================================
+  ROTATING TEXT
+====================================*/
+
+.circleText{
+    position:absolute;
+    left:40%;
+    top:60%;
+
+    width:120px;
+    height:120px;
+
+    transform:translate(-50%,-50%);
+    z-index:5;
+
+    pointer-events:none;
+}
+
+.circleText svg{
+    width:100%;
+    height:100%;
+    animation:rotateCircle 12s linear infinite;
+
+}
+
+.circleText text{
+    fill:#fff;
+    font-size:18px;
+    letter-spacing:14px;
+    text-transform:uppercase;
+    font-weight:600;
+}
+
+@keyframes rotateCircle{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/*====================================
+  PLAY BUTTON
+====================================*/
+
+.playCircle{
+
+    position:absolute;
+
+    right:40%;
+    top:48%;
+    overflow:hidden;
+    transform:translate(50%,-50%);
+
+    width: 110px;
+    height:110px;
+    background:rgba(253, 15, 15, 0);
+    border:2px solid rgba(255,255,255,.8);
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.playBtn{
+
+    
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:26px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.playBtn:hover{
+
+    transform:scale(1.1);
+
+}
+
+/*====================================
+  IMAGE HOVER
+====================================*/
+
+.blueImage,
+.redImage{
+
+    transition:.4s;
+
+}
+
+.blueImage:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.redImage:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.blueImage img,
+.redImage img{
+
+    transition:.4s;
+
+}
+
+.blueImage:hover img,
+.redImage:hover img{
+
+    transform:scale(1.05);
+
+}
+
+/*====================================
+  RESPONSIVE
+====================================*/
+
+@media(max-width:1200px){
+
+.popularContainer{
+
+    flex-direction:column;
+
+    gap:70px;
+
+}
+
+.popularLeft{
+
+    max-width:100%;
+    text-align:center;
+
+}
+
+.shopBtn{
+
+    margin:auto;
+
+}
+
+.popularRight{
+
+    width:100%;
+    height:760px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.popularStyles{
+
+    padding:80px 0;
+
+}
+
+.popularContainer{
+
+    width:92%;
+
+}
+
+.popularTitle{
+
+    font-size:42px;
+
+}
+
+.popularText{
+
+    font-size:17px;
+
+}
+
+.popularRight{
+
+    height:auto;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.blueImage,
+.redImage{
+
+    position:relative;
+
+    width:100%;
+    max-width:340px;
+
+    height:470px;
+
+}
+
+.redImage{
+
+    margin-top:35px;
+
+}
+
+.circleText{
+
+    width:150px;
+    height:150px;
+
+}
+
+.playCircle{
+
+    width:150px;
+    height:150px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.popularTitle{
+
+    font-size:34px;
+
+}
+
+.sectionTag{
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+}
+
+.shopBtn{
+
+    width:100%;
+
+}
+
+.blueImage,
+.redImage{
+
+    height:420px;
+
+}
+
+.circleText{
+
+    width:120px;
+    height:120px;
+
+}
+
+.playCircle{
+
+    width:120px;
+    height:120px;
+
+}
+
+.playBtn{
+
+    width:60px;
+    height:60px;
+
+    font-size:20px;
+
+}
+
+}

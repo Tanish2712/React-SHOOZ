@@ -1,0 +1,33 @@
+.sortBar {
+  width: 92%;
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sortBar h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sortBar select {
+  width: 220px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .sortBar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .sortBar select {
+    width: 100%;
+  }
+}

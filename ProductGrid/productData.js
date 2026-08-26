@@ -1,0 +1,253 @@
+import shoe1 from "../../assets/products/shoe1.jpg";
+import shoe1Hover from "../../assets/products/shoe1-hover.jpeg";
+
+import shoe2 from "../../assets/products/shoe2.jpg";
+import shoe2Hover from "../../assets/products/shoe2-hover.jpeg";
+
+import shoe3 from "../../assets/products/shoe3.jpg";
+import shoe3Hover from "../../assets/products/shoe3-hover.jpeg";
+
+import shoe4 from "../../assets/products/shoe4.jpg";
+import shoe4Hover from "../../assets/products/shoe4-hover.jpeg";
+
+const productData = [
+
+  // ================= ATHLETIC =================
+
+  {
+    id: 1,
+    name: "Classic White Tennis Sneakers",
+    brand: "SportyFeet",
+    price: 2499,
+    oldPrice: 3299,
+    category: "athletic",
+    image: shoe1,
+    hoverImage: shoe1Hover,
+    badge: "SALE",
+    rating: 5,
+    description: "Comfortable sneakers designed for daily use.",
+    availability: "In Stock",
+    color: "White",
+    size: [7, 8, 9, 10],
+    featured: true,
+    createdAt: "2026-07-01",
+  },
+
+  {
+    id: 2,
+    name: "Air Running Shoes",
+    brand: "SportyFeet",
+    price: 2799,
+    oldPrice: 3599,
+    category: "athletic",
+    image: shoe2,
+    hoverImage: shoe2Hover,
+    badge: "HOT",
+    rating: 4,
+    description: "Lightweight running shoes with air cushioning.",
+    availability: "In Stock",
+    color: "Blue",
+    size: [8, 9, 10],
+    featured: false,
+    createdAt: "2026-06-28",
+  },
+
+  {
+    id: 3,
+    name: "Training Sneakers",
+    brand: "SportyFeet",
+    price: 2299,
+    oldPrice: 2999,
+    category: "athletic",
+    image: shoe3,
+    hoverImage: shoe3Hover,
+    badge: "NEW",
+    rating: 5,
+    description: "Ideal for gym workouts and training sessions.",
+    availability: "Out Of Stock",
+    color: "Black",
+    size: [7, 8, 9],
+    featured: true,
+    createdAt: "2026-07-05",
+  },
+
+  // ================= LUXURY =================
+
+  {
+    id: 4,
+    name: "Luxury Leather Boots",
+    brand: "TrailGear",
+    price: 4599,
+    oldPrice: 5499,
+    category: "luxury",
+    image: shoe4,
+    hoverImage: shoe4Hover,
+    badge: "NEW",
+    rating: 5,
+    description: "Premium leather boots with elegant finish.",
+    availability: "In Stock",
+    color: "Brown",
+    size: [8, 9, 10],
+    featured: true,
+    createdAt: "2026-07-03",
+  },
+
+  {
+    id: 5,
+    name: "Premium Oxford Shoes",
+    brand: "TrailGear",
+    price: 4999,
+    oldPrice: 5899,
+    category: "luxury",
+    image: shoe1,
+    hoverImage: shoe1Hover,
+    badge: "HOT",
+    rating: 4,
+    description: "Formal luxury shoes crafted from genuine leather.",
+    availability: "In Stock",
+    color: "Black",
+    size: [7, 8, 9],
+    featured: false,
+    createdAt: "2026-06-22",
+  },
+
+  {
+    id: 6,
+    name: "Designer Loafers",
+    brand: "TrailGear",
+    price: 4299,
+    oldPrice: 5199,
+    category: "luxury",
+    image: shoe2,
+    hoverImage: shoe2Hover,
+    badge: "SALE",
+    rating: 5,
+    description: "Elegant loafers with premium comfort.",
+    availability: "Out Of Stock",
+    color: "Brown",
+    size: [8, 9],
+    featured: true,
+    createdAt: "2026-07-06",
+  },
+
+  // ================= SUSTAINABLE =================
+
+  {
+    id: 7,
+    name: "Eco Leather Sneakers",
+    brand: "UrbanStep",
+    price: 2399,
+    oldPrice: 2999,
+    category: "sustainable",
+    image: shoe3,
+    hoverImage: shoe3Hover,
+    badge: "ECO",
+    rating: 5,
+    description: "Made using recycled eco-friendly materials.",
+    availability: "In Stock",
+    color: "White",
+    size: [7, 8, 9],
+    featured: true,
+    createdAt: "2026-07-02",
+  },
+
+  {
+    id: 8,
+    name: "Organic Canvas Shoes",
+    brand: "UrbanStep",
+    price: 2199,
+    oldPrice: 2799,
+    category: "sustainable",
+    image: shoe1,
+    hoverImage: shoe1Hover,
+    badge: "NEW",
+    rating: 4,
+    description: "Organic cotton shoes with recycled rubber sole.",
+    availability: "In Stock",
+    color: "Blue",
+    size: [6, 7, 8],
+    featured: false,
+    createdAt: "2026-06-26",
+  },
+
+  {
+    id: 9,
+    name: "Recycled Runner",
+    brand: "UrbanStep",
+    price: 2699,
+    oldPrice: 3299,
+    category: "sustainable",
+    image: shoe2,
+    hoverImage: shoe2Hover,
+    badge: "HOT",
+    rating: 5,
+    description: "Performance shoes made from recycled materials.",
+    availability: "Out Of Stock",
+    color: "Black",
+    size: [8, 9, 10],
+    featured: true,
+    createdAt: "2026-07-04",
+  },
+
+  // ================= SANDALS =================
+
+  {
+    id: 10,
+    name: "Comfort Walking Sandals",
+    brand: "TrendyFeet",
+    price: 1799,
+    oldPrice: 2399,
+    category: "sandals",
+    image: shoe4,
+    hoverImage: shoe4Hover,
+    badge: "HOT",
+    rating: 5,
+    description: "Comfortable sandals with cushioned footbed.",
+    availability: "In Stock",
+    color: "Brown",
+    size: [7, 8, 9],
+    featured: true,
+    createdAt: "2026-07-05",
+  },
+
+  {
+    id: 11,
+    name: "Leather Outdoor Sandals",
+    brand: "TrendyFeet",
+    price: 2099,
+    oldPrice: 2699,
+    category: "sandals",
+    image: shoe3,
+    hoverImage: shoe3Hover,
+    badge: "SALE",
+    rating: 4,
+    description: "Durable sandals suitable for outdoor trips.",
+    availability: "In Stock",
+    color: "Black",
+    size: [8, 9, 10],
+    featured: false,
+    createdAt: "2026-06-30",
+  },
+
+  {
+    id: 12,
+    name: "Beach Flip Sandals",
+    brand: "TrendyFeet",
+    price: 1499,
+    oldPrice: 1999,
+    category: "sandals",
+    image: shoe2,
+    hoverImage: shoe2Hover,
+    badge: "NEW",
+    rating: 4,
+    description: "Lightweight beach sandals with soft sole.",
+    availability: "Out Of Stock",
+    color: "Blue",
+    size: [6, 7, 8],
+    featured: true,
+    createdAt: "2026-07-07",
+  },
+
+];
+
+export default productData;

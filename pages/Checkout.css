@@ -1,0 +1,47 @@
+.checkout{
+padding:80px 8%;
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+}
+
+.billing form{
+display:grid;
+gap:15px;
+}
+
+.billing input{
+height:50px;
+padding:0 15px;
+border:1px solid #ddd;
+outline:none;
+}
+
+.billing button{
+height:50px;
+background:#111;
+color:#fff;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+.order-summary{
+background:#f7f7f7;
+padding:30px;
+height:fit-content;
+}
+
+.summary-item{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+}
+
+@media(max-width:768px){
+
+.checkout{
+grid-template-columns:1fr;
+}
+
+}
